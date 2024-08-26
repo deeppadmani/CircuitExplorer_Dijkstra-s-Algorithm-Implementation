@@ -1,0 +1,23 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: configure
+      run: cd DMP210005_CE6320_Project
+    - name: Clean
+      run: clean
+    - name: Build
+      run: make
+    - name: Run
+      run: ./iscas c17.bench G1gat G22gat
