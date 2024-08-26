@@ -13,11 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: configure
-      run: cd DMP210005_CE6320_Project
     - name: Clean
-      run: clean
+      run: make clean
     - name: Build
       run: make
     - name: Run
-      run: ./iscas c17.bench G1gat G22gat
+      run: ./runtest.sh
