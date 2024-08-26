@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Configure
+      run: chmod +x runtest.sh
     - name: Clean
       run: make clean
     - name: Build
