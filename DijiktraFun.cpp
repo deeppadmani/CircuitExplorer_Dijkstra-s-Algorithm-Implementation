@@ -44,10 +44,10 @@ int dijkstra(Graph CIRCUIT, int start, int destination, map<string,int> &InputOu
     
     if(INF == dist[destination])
     {
-          cout << "Shortest path from " << findKeyByValue(InputOutputMap,start) << " to " << findKeyByValue(InputOutputMap,destination) << " is: NOT FOUND"<< endl ;
+          cout << "OUTPUT: Shortest path from " << findKeyByValue(InputOutputMap,start) << " to " << findKeyByValue(InputOutputMap,destination) << " is: NOT FOUND"<< endl ;
           return dist[destination];
     }      
-    cout << "Shortest path from " << findKeyByValue(InputOutputMap,start) << " to " << findKeyByValue(InputOutputMap,destination) << " is: ";
+    cout << "OUTPUT: Shortest path from " << findKeyByValue(InputOutputMap,start) << " to " << findKeyByValue(InputOutputMap,destination) << " is: ";
     int current = destination;
     stack<int> path;
 
